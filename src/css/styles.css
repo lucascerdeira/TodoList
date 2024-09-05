@@ -1,0 +1,16 @@
+body {
+    background-color: #000000;
+    ;
+}
+
+#logo {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 30vh; 
+}
+
+#logo img {
+    max-width: 100%; 
+    height: auto;
+}
