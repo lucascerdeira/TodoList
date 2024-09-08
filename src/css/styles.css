@@ -1,16 +1,179 @@
 body {
-    background-color: #000000;
-    ;
-}
-
-#logo {
+    min-height: 90vh;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    color: whitesmoke;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 30vh; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2b2d31;
+    margin: 0;
+    margin-inline: auto;
+    overflow-x: hidden;
+  }
+
+.logo {
+    width: 231.45px;
+    height: 60px;
+    top: 118px;
+    left: 640px;
+    margin-bottom: 40px;
+    gap: 0px;
+    opacity: 0px;
+ 
 }
 
-#logo img {
-    max-width: 100%; 
-    height: auto;
+.tarefas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 622px;
+  }
+
+.tarefas_header {
+    width: 100%;
+    border-bottom: 1px solid #3c4043;
 }
+
+.tarefas_header h1 {
+    font-size: 20px; 
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.tarefas_sem_conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.tarefas_sem_conteudo p.primeiro_paragrafo{
+    font-size: 1.5rem;
+    font-weight: 500;
+    
+}
+
+.tarefas_sem_conteudo p.segundo_paragrafo{
+    font-size: 1.5rem;
+    font-size: 0.875rem;
+    color: #bdbdbd;
+}
+
+.tarefas_com_conteudo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarefas_com_conteudo{
+    margin: 32px;
+}
+
+.tarefas_btn_add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: #bdbdbd;
+    width: 100%;
+    padding: 20px 16px;
+    border: 3px dashed #bdbdbd; 
+    border-radius: 8px;
+    margin-bottom: 16px; 
+
+}
+
+.tarefas_btn_add:hover {
+    color: white;
+    border: 0.125rem solid white;
+    border-style: dashed;
+}
+
+.nav_bar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #2b2d31;
+    padding: 0 32px;
+    transform: translateX(100%);
+    transition: transform 300ms ease-on-out;
+}
+
+.nav_bar_conteudo {
+    width: 422px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+}
+
+.nav_bar_btn-fechar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 200ms ease-in-out;
+
+}
+
+.nav_bar_btn-fechar:hover {
+    background-color: #3c4043;
+}
+
+
+
+
+h1,h2,h3,p {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+
+  }
+
+@media screen and (max-width: 767px) {
+    .tarefas {
+        width: 100vw;
+        padding: 0 2rem;
+        }
+    .nav_bar {
+        width: 100vw;
+    }
+    .nav_bar_conteudo {
+        width: 100%;
+    }
+    }
+
+@media screen and (max-width: 412px) {
+    .tarefas {
+        padding: 0 1rem;
+
+        }
+
+    .tarefas_item_header {
+
+    }
+    }
