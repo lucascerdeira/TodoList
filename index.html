@@ -25,23 +25,36 @@
             <div class="tarefas_header">
                 <h1>Tarefas</h1>
             </div>
-            <div class="tarefas_sem_conteudo">
+            <div id="tarefasSemConteudo" class="tarefas_sem_conteudo">
                 <p class="primeiro_paragrafo">Você ainda não criou nenhuma tarefa</p>
                 <p class="segundo_paragrafo">Não se preocupe, suas novas tarefas irão aparecer aqui.</p>
             </div>
             <div class="tarefas_com_conteudo"></div>
-                <button class="tarefas_btn_add">
+                <button class="tarefas_btn_add" id="tarefasBtnAdd">
                     <img src="/src/images/add.svg">
                     Adicionar tarefas
                 </button>
         </section>
-        <section class="nav_bar">
+        <section class="nav_bar" id="tarefasEdit">
             <div class="nav_bar_conteudo">
-                <button class="nav_bar_btn-fechar">
+                <button class="nav_bar_btn_fechar" id="tarefasBtnFechar">
                     <img src="/src/images/close.svg" alt="Fechar">
                 </button>
+                <form class="nav_bar_forms">
+                    <div>
+                        <label for="tarefa_nome">Nome</label>
+                        <input type="text" required id="tarefa_nome" name="tarefa_nome"/>
+                    </div>
+                    <div>
+                        <label for="tarefa_descricao">Descrição (Opcional)</label>
+                        <textarea id="tarefa_descricao" name="tarefa_descricao"></textarea>
+                    </div>
+                    <div>
+                        <button type="button" class="tarefa_btn_fechar" id="nav_bar_btn_fechar">Fechar</button>
+                        <button type="submit"  class="tarefa_btn_salvar">Salvar Tarefa</button>
+                    </div>
+                </form>
             </div>
-
         </section>
     </main>
     
