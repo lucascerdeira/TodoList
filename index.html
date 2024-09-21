@@ -43,17 +43,20 @@
                 <form class="nav_bar_forms">
                     <div>
                         <label for="tarefa_nome">Nome</label>
-                        <input type="text" required id="tarefa_nome" name="tarefa_nome"/>
+                        <input type="text" required id="tarefaNome" name="tarefa_nome"/>
                     </div>
                     <div>
                         <label for="tarefa_descricao">Descrição (Opcional)</label>
-                        <textarea id="tarefa_descricao" name="tarefa_descricao"></textarea>
+                        <textarea id="tarefaDescricao" name="tarefa_descricao"></textarea>
                     </div>
                     <div>
-                        <button type="button" class="tarefa_btn_fechar" id="nav_bar_btn_fechar">Fechar</button>
-                        <button type="submit"  class="tarefa_btn_salvar">Salvar Tarefa</button>
+                        <button type="button" class="tarefa_btn_fechar" id="navBarBtnFechar">Fechar</button>
+                        <button type="button" onclick="salvarTarefa()" class="tarefa_btn_salvar">Salvar Tarefa</button>
                     </div>
                 </form>
+                <div>
+                        
+                </div>
             </div>
         </section>
     </main>
