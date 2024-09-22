@@ -11,9 +11,7 @@ body {
     margin: 0;
     margin-inline: auto;
     overflow-x: hidden;
-  }
-
-
+}
 
 .tarefas {
     display: flex;
@@ -22,7 +20,7 @@ body {
     justify-content: center;
     width: 700px;
     margin-top: 5rem;
-  }
+}
 
 .tarefas_header {
     width: 100%;
@@ -49,7 +47,6 @@ body {
 .tarefas_sem_conteudo p.primeiro_paragrafo{
     font-size: 1.5rem;
     font-weight: 500;
-    
 }
 
 .tarefas_sem_conteudo p.segundo_paragrafo{
@@ -79,7 +76,6 @@ body {
     border: 3px dashed #bdbdbd; 
     border-radius: 8px;
     margin-bottom: 16px; 
-
 }
 
 .tarefas_btn_add:hover {
@@ -87,7 +83,6 @@ body {
     border: 0.125rem solid white;
     border-style: dashed;
 }
-
 
 .nav_bar {
     position: fixed;
@@ -108,7 +103,7 @@ body {
     opacity: 1;
     visibility: visible;
     transition: max-width 300ms ease-in-out;
-  }
+}
 
 .nav_bar_conteudo {
     display: flex;
@@ -120,9 +115,9 @@ body {
 .nav_bar_add_tarefas.open{
     visibility: visible;
 }
+
 .nav_bar_btn_fechar {
     display: flex;
-    position: absolute;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -143,9 +138,7 @@ body {
     font-size: 24px;
     font-weight: 600;
     color: #fff;
-    
 }
-
 
 .nav_bar_forms label {
     font-size: 18px;
@@ -164,7 +157,6 @@ body {
     resize: none; 
     outline: none;
     margin-bottom: 3rem;
-    
 }
 
 .nav_bar_forms textarea {
@@ -186,8 +178,6 @@ body {
     justify-content: flex-end; 
     gap: 10px;
 }
-
-
 
 .tarefa_btn_fechar {
     background-color: transparent;
@@ -217,11 +207,7 @@ body {
     background-color: #07357a;
 }
 
-
-
-
-
-h1,h2,h3,p {
+h1, h2, h3, p {
   padding: 0;
   margin: 0;
 }
@@ -234,14 +220,91 @@ button {
     padding: 0;
     border: none;
     cursor: pointer;
+}
 
-  }
+
+.tarefa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #3c4043;
+}
+
+
+.tarefa-conteudo {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    margin-left: 10px;
+}
+
+
+.tarefa-acoes {
+    display: flex;
+    gap: 10px; 
+}
+
+
+.tarefa-acoes img {
+    cursor: pointer;
+}
+
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+input[type="checkbox"]:checked::after {
+    content: '✔'; 
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 4px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #0066cc; 
+    border-color: #0066cc;
+}
+
+
+.tarefa-conteudo.checked span:first-child,
+.tarefa-conteudo.checked span:last-child {
+    text-decoration: line-through;
+    color: #999; 
+}
+
+
+.tarefa-conteudo span:first-child {
+    font-weight: bold;
+    color: #fff; 
+}
+
+/* Estiliza a descrição da tarefa */
+.tarefa-conteudo span:last-child {
+    color: #ccc; 
+    font-size: 14px;
+}
 
 @media screen and (max-width: 767px) {
     .tarefas {
         width: 100%;
         padding: 0 2rem;
-        }
+    }
     .nav_bar {
         width: 100%;
     }
@@ -253,10 +316,5 @@ button {
 @media screen and (max-width: 412px) {
     .tarefas {
         padding: 0 1rem;
-
-        }
-
-    .tarefas_item_header {
-
     }
-    }
+}
